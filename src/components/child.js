@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import Grandchild from './grandchild';
+
 const ChildComponent = () => {
   const [count, setCount] = useState(0);
   return (
@@ -8,6 +10,8 @@ const ChildComponent = () => {
       <h2>Count result from child component ONLY: {count}</h2>
       <button onClick={() => setCount(count + 1)}> +1 </button>
       <button onClick={() => setCount(count - 1)}> -1 </button>
+
+      <Grandchild></Grandchild>
     </div>
   )
 };
